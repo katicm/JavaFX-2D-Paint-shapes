@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaintController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#dialogExit" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="18.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbStatusbar" layoutX="12.0" prefHeight="17.0" prefWidth="91.0" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Label fx:id="lbStatusmode" prefHeight="17.0" prefWidth="120.0" AnchorPane.leftAnchor="110.0">
+               <font>
+                  <Font name="Bodoni MT Black" size="14.0" />
+               </font></Label>
+         </children></AnchorPane>
+   </bottom>
+   <left>
+      <StackPane prefHeight="558.0" prefWidth="95.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="point" fitHeight="92.5" fitWidth="95.0" onMouseClicked="#point" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+               <image>
+                  <Image url="@../images/point.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow height="16.0" radius="7.5" width="16.0" />
+               </effect>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <ImageView fx:id="line" fitHeight="92.5" fitWidth="95.0" layoutY="186.0" onMouseClicked="#line" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+               <image>
+                  <Image url="@../images/line.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets top="92.5" />
+               </StackPane.margin>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow height="16.0" radius="7.5" width="16.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="circle" fitHeight="92.5" fitWidth="95.0" layoutY="93.0" onMouseClicked="#circle" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+               <image>
+                  <Image url="@../images/circle.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets top="186.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow height="16.0" radius="7.5" width="16.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="triangle" fitHeight="92.5" fitWidth="95.0" layoutY="465.0" onMouseClicked="#triangle" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+               <image>
+                  <Image url="@../images/triangle.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets top="465.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow height="16.0" radius="7.5" width="16.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="rectangle" fitHeight="92.5" fitWidth="95.0" layoutY="372.0" onMouseClicked="#rectangle" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+               <image>
+                  <Image url="@../images/rectangle.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets top="372.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow height="16.0" radius="7.5" width="16.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="square" fitHeight="92.5" fitWidth="95.0" layoutY="279.0" onMouseClicked="#square" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+               <image>
+                  <Image url="@../images/square.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets top="279.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow height="16.0" radius="7.5" width="16.0" />
+               </effect>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </StackPane>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <StackPane prefHeight="92.5" prefWidth="805.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btSelect" buttonType="RAISED" onMouseClicked="#selectclicked" prefHeight="93.0" prefWidth="93.0" style="-fx-background-color: #EC372F; -fx-border-width: 4; -fx-border-color: #000000;" text="SELECT" StackPane.alignment="CENTER_LEFT">
+                     <StackPane.margin>
+                        <Insets left="188.0" />
+                     </StackPane.margin>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                     <font>
+                        <Font name="Bodoni MT Black" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXColorPicker id="color" fx:id="strokecolor" onAction="#strokecolorchange" prefHeight="78.0" prefWidth="93.0" promptText="BOJA" style="-fx-background-color: #212121;" StackPane.alignment="TOP_LEFT">
+                  	<value>
+                  		<Color blue="0.0" green="0.0" red="0.0" />
+                  	</value>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXColorPicker>
+                  <JFXButton fx:id="btDelete" buttonType="RAISED" onMouseClicked="#deleteclicked" prefHeight="93.0" prefWidth="93.0" style="-fx-background-color: #EC372F; -fx-border-width: 4; -fx-border-color: #000000;" text="DELETE" StackPane.alignment="CENTER_LEFT">
+                     <StackPane.margin>
+                        <Insets left="376.0" />
+                     </StackPane.margin>
+                     <font>
+                        <Font name="Bodoni MT Black" size="12.0" />
+                     </font>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </JFXButton>
+                  <JFXColorPicker fx:id="fillcolor" onAction="#fillcolorchange" prefHeight="78.0" prefWidth="93.0" StackPane.alignment="TOP_LEFT">
+                     
+                     <StackPane.margin>
+                        <Insets left="94.0" />
+                     </StackPane.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXColorPicker>
+                  <Label prefHeight="10.0" prefWidth="93.0" style="-fx-background-color: #FFFFFF;" text="      Line  Color" textAlignment="CENTER" textFill="#c90000" textOverrun="CLIP" StackPane.alignment="BOTTOM_LEFT">
+                     <font>
+                        <Font name="System Bold Italic" size="11.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" height="12.11" radius="4.8125" width="9.14" />
+                     </effect>
+                  </Label>
+                  <Label prefHeight="15.0" prefWidth="93.0" style="-fx-background-color: #FFFFFF;" text="       Fill   Color" textFill="#c90000" StackPane.alignment="BOTTOM_LEFT">
+                     <StackPane.margin>
+                        <Insets left="94.0" />
+                     </StackPane.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="11.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" height="12.11" radius="4.8125" width="9.14" />
+                     </effect>
+                  </Label>
+                  <ImageView fx:id="spray" fitHeight="93.0" fitWidth="93.0" onMouseClicked="#spray" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
+                     <StackPane.margin>
+                        <Insets left="471.0" />
+                     </StackPane.margin>
+                     <image>
+                        <Image url="@../images/spray.png" />
+                     </image>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="78.0" prefWidth="150.0" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="580.0" />
+                     </StackPane.margin>
+                     <children>
+                        <JFXSlider fx:id="slider" cache="true" layoutY="48.0" showTickLabels="true" value="30.0" />
+                     </children>
+                  </Pane>
+                  <Label prefHeight="10.0" prefWidth="93.0" text="  Spray Thickness" textAlignment="CENTER" textFill="#c90000" textOverrun="CLIP" StackPane.alignment="BOTTOM_LEFT">
+                     <font>
+                        <Font name="System Bold Italic" size="11.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="590.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <JFXButton fx:id="btEdit" buttonType="RAISED" onMouseClicked="#editclicked" prefHeight="93.0" prefWidth="93.0" style="-fx-background-color: #EC372F; -fx-border-width: 4; -fx-border-color: #000000;" text="EDIT" StackPane.alignment="CENTER_LEFT">
+                     <StackPane.margin>
+                        <Insets left="282.0" />
+                     </StackPane.margin>
+                     <font>
+                        <Font name="Bodoni MT Black" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </StackPane>
+         </top>
+         <center>
+            <StackPane fx:id="stackcanvas" prefHeight="464.0" prefWidth="805.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Canvas fx:id="canvas" height="464.0" width="805.0" StackPane.alignment="CENTER" />
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,13 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-color:#DCDCDC;
+}
+
+
+
+.jfx-slider .thumb{ -fx-background-color:#FF0000; }
+.jfx-slider .track{ -fx-background-color:#FF0000; }
+.jfx-slider .colored-track { -fx-background-color:#000000; }
+.jfx-slider .animated-thumb{ -fx-background-color:#FF0000; }
+.slider .axis { -fx-tick-label-fill: #FF0000; }
+

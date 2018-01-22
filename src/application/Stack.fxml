@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StackController">
+   <right>
+      <StackPane prefHeight="429.0" prefWidth="106.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btDelete" style="-fx-border-radius: 40 40 40 40 ; -fx-background-radius: 40 40 40 40 ; -fx-background-color:#C0C0C0;" prefHeight="100.0" prefWidth="100.0" text="DELETE">
+               <StackPane.margin>
+                  <Insets top="100.0" />
+               </StackPane.margin>
+            </JFXButton>
+            <JFXButton fx:id="btAdd" buttonType="RAISED" prefHeight="100.0" prefWidth="100.0" ripplerFill="BLACK" style="-fx-border-radius: 40 40 40 40 ; -fx-background-radius: 40 40 40 40 ; -fx-background-color:#0066FF;" text="ADD" textOverrun="CLIP" StackPane.alignment="CENTER">
+               <StackPane.margin>
+                  <Insets bottom="150.0" />
+               </StackPane.margin>
+            </JFXButton>
+         </children>
+      </StackPane>
+   </right>
+   <center>
+      <JFXListView fx:id="lvlist" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
